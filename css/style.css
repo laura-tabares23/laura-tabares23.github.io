@@ -1,66 +1,271 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-body{
-    background-color: #E2DDF9;
+body {
+    background-image: url(../imagen/fondobody.svg) ;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover; 
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
     font-family: "Lato", sans-serif;
 }
-.boxOne{
-    width: 20%;
+.container{
+    display: flex;
+    align-items: center;
+    height: 100%;
+    width: 90%;
+    max-width: 1200px;
+    gap: 20px;
+}
+.boxOne {
+    width: 30%;
     height: 90%;
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    background: rgba(12, 12, 12, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
     border-radius: 10px;
 }
-.boxTwo{
-    width: 50%;
+.boxTwo {
+    width: 70%;
     height: 90%;
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
+    background: rgba(12, 12, 12, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
     border-radius: 10px;
 }
-.fotoPerfil{
-    width: 50%;
-    height: 20%;
+.fotoPerfil {
+    width: 160px;
+    height: 160px;
     margin: auto;
     margin-top: 40px;
     border-radius: 10px;
-    background: rgba(12, 12, 12, 0.25);
+    background: rgba(255, 255, 255, 0.74);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    overflow: hidden;
+   
 }
-.fotoPerfil img{
+.fotoPerfil img {
     width: 100%;
     height: 100%;
     z-index: 2;
+    transition: all .4s ease;
 }
-h1{
-    background: rgba(12, 12, 12, 0.25);
-    width: 60%;
+.fotoPerfil img:hover{
+    scale: 1.1;
+}
+h2 {
+    background: rgba(255, 255, 255, 0.74);
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    width: 70%;
     text-align: center;
     margin: auto;
     margin-top: 20px;
     border-radius: 5px;
-    color: white;
+    font-size: 24px;
+    padding: 5px;
+    color:  rgba(128, 128, 128, 0.671);
+    letter-spacing: 2px;
+    margin-bottom: 20px;
 }
-.titulo{
+.titulo {
     text-align: center;
-    font-weight: 300;
-    margin-top: 10px;
+    margin-top: 20px;
     margin-bottom: 10px;
+    font-weight: 300;
 }
-hr{
-    width: 80%;
+hr {
+    width: 85%;
     margin: auto;
-
 }
+.contacto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.boxIcono {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.boxIcono h3{
+    padding-left: 35px;
+    font-weight: 400;
+}
+i {
+    color: rgba(128, 128, 128, 0.671);
+    font-size: 25px;
+    transition: all .4s ease-in; 
+}
+.boxIconoGmail{
+    display: flex;
+    gap: 10px;
+ 
+}
+.boxContacto:hover  .fa-envelope{
+    color: #CF4440;
+}
+.boxContacto:hover  .fa-codepen{
+    color: #248C46;
+}
+.boxContacto:hover  .fa-github{
+    color: #010409;
+}
+
+.boxContacto:hover  .fa-linkedin{
+    color: #0A66C2;
+}
+.boxContacto p{
+    padding-left: 35px;
+    font-weight: 300;
+}
+
+.boxContacto{
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 8px;
+    width: 85%;
+    background: rgba(255, 255, 255, 0.61);
+    transition: box-shadow .2s ease-in-out;
+    position: relative;
+}
+#boxEmail{
+    padding: 5px;
+}
+.boxContacto a{
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    color: black;
+    padding: 5px;
+}
+.boxContacto i{
+    position: absolute;
+    top: 9px;
+    left: 5px;
+}
+.boxContacto:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.boxTwo p{
+    padding: 0 20px 0 20px;
+    width: 85%;
+    margin: auto;
+     font-weight: 500; 
+    margin-top: 10px;
+    letter-spacing: 3px;
+    border: solid 1px rgba(128, 128, 128, 0.671);
+    background-color:  rgba(128, 128, 128, 0.671);
+    padding: 5px;
+    border-radius: 5px;
+    color: rgba(255, 255, 255, 0.74);
+}
+
+@media(max-width: 720px){
+    .boxOne {
+        width: 35%;
+    }
+    .fotoPerfil {
+        width: 70%;
+    }
+    h1{
+        width: 90%;
+    }  
+}
+@media(max-width: 375px){
+    .container{
+        flex-direction: column;
+    }
+    .fotoPerfil{
+        width: 90px;
+        height: 90px;
+        margin-top: 8px;
+    }
+    h2{
+        margin-top: 10px;
+        color: gray;
+        width: 60%;
+    }
+    .boxOne{
+        width: 100%;
+        height: 35%;
+    }
+    .boxTwo {
+        width: 100%;
+        height: 70%;
+    }
+    .contacto{
+        flex-direction: row;
+        gap: 15px;
+        justify-content: center;
+        margin: 10px;    
+    }
+    .boxContacto{
+        width: 40px;
+    }
+    .boxIcono{
+        height: 28px;
+    }
+    .boxContacto h3{
+        display: none;
+    }
+    .boxContacto p{
+        display: none;
+    }
+}
+
+.button-89 {
+    --b: 3px; 
+    --s: .45em;
+    --color: #373B44;
+    padding: calc(.5em + var(--s)) calc(.9em + var(--s));
+    color: var(--color);
+    --_p: var(--s);
+    background:
+      conic-gradient(from 90deg at var(--b) var(--b),#0000 90deg,var(--color) 0)
+      var(--_p) var(--_p)/calc(100% - var(--b) - 2*var(--_p)) calc(100% - var(--b) - 2*var(--_p));
+    transition: .3s linear, color 0s, background-color 0s;
+    outline: var(--b) solid #0000;
+    outline-offset: .6em;
+    font-size: 16px;
+    
+    border: 0;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-89:hover,
+  .button-89:focus-visible{
+    --_p: 0px;
+    outline-color: var(--color);
+    outline-offset: .05em;
+  }
+  
+  .button-89:active {
+    background: var(--color);
+    color: #fff;
+  }
+  .box_curriculum{
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+  .box_logo{
+   margin: auto;
+    width: 500px;
+    opacity: .8;
+  }
+ 
 
